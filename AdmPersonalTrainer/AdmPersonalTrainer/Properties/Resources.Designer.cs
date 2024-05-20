@@ -133,6 +133,16 @@ namespace AdmPersonalTrainer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_select_users_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-select-users-64", resourceCulture);
@@ -146,6 +156,16 @@ namespace AdmPersonalTrainer.Properties {
         internal static System.Drawing.Bitmap icons8_trainer_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-trainer-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -8,3 +8,4 @@ C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal t
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\obj\Debug\AdmPersonalTrainer.exe
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\obj\Debug\AdmPersonalTrainer.pdb
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\obj\Debug\AdmPersonalTrainer.Inicio.resources
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\obj\Debug\AdmPersonalTrainer.Iniciar_Sesion.resources
