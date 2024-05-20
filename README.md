@@ -3,5 +3,6 @@ Este administrador puede registrar los clientes del personal trainer donde el PT
 
     UML
 
-![UML](https://github.com/LeandroTroncoso98/AdministradorClientesPersonalTrainer/assets/105368488/6fe20d49-6ed3-4d96-96f4-10fbd07fe542)
+
+![UML](https://github.com/LeandroTroncoso98/AdministradorClientesPersonalTrainer/assets/105368488/f16eadea-135a-4054-8870-890f7c9a1a7c)
 
