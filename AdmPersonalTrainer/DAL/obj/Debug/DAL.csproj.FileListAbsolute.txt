@@ -1,0 +1,6 @@
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\bin\Debug\DAL.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\bin\Debug\DAL.pdb
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\obj\Debug\DAL.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\DAL\obj\Debug\DAL.pdb

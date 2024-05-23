@@ -29,30 +29,34 @@ namespace AdmPersonalTrainer.Clientes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesTabla));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtClienteNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblMsjEmail = new System.Windows.Forms.Label();
+            this.lblMsjTelefono = new System.Windows.Forms.Label();
+            this.lblMsjApellido = new System.Windows.Forms.Label();
+            this.lblMsjNombre = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblMsjNombre = new System.Windows.Forms.Label();
-            this.lblMsjApellido = new System.Windows.Forms.Label();
-            this.lblMsjTelefono = new System.Windows.Forms.Label();
-            this.lblMsjEmail = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtClienteNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,14 +68,6 @@ namespace AdmPersonalTrainer.Clientes
             this.label1.Size = new System.Drawing.Size(213, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "LISTA DE CLIENTES";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 188);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 415);
-            this.dataGridView1.TabIndex = 1;
             // 
             // label2
             // 
@@ -104,76 +100,49 @@ namespace AdmPersonalTrainer.Clientes
             this.panel1.Size = new System.Drawing.Size(522, 299);
             this.panel1.TabIndex = 6;
             // 
-            // label3
+            // lblMsjEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(3, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "FORMULARIO CLIENTE";
+            this.lblMsjEmail.AutoSize = true;
+            this.lblMsjEmail.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsjEmail.ForeColor = System.Drawing.Color.Red;
+            this.lblMsjEmail.Location = new System.Drawing.Point(90, 229);
+            this.lblMsjEmail.Name = "lblMsjEmail";
+            this.lblMsjEmail.Size = new System.Drawing.Size(110, 12);
+            this.lblMsjEmail.TabIndex = 17;
+            this.lblMsjEmail.Text = "* Mensaje Error";
             // 
-            // txtClienteNombre
+            // lblMsjTelefono
             // 
-            this.txtClienteNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.txtClienteNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClienteNombre.Location = new System.Drawing.Point(92, 87);
-            this.txtClienteNombre.Name = "txtClienteNombre";
-            this.txtClienteNombre.Size = new System.Drawing.Size(209, 13);
-            this.txtClienteNombre.TabIndex = 7;
+            this.lblMsjTelefono.AutoSize = true;
+            this.lblMsjTelefono.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsjTelefono.ForeColor = System.Drawing.Color.Red;
+            this.lblMsjTelefono.Location = new System.Drawing.Point(90, 186);
+            this.lblMsjTelefono.Name = "lblMsjTelefono";
+            this.lblMsjTelefono.Size = new System.Drawing.Size(110, 12);
+            this.lblMsjTelefono.TabIndex = 16;
+            this.lblMsjTelefono.Text = "* Mensaje Error";
             // 
-            // label4
+            // lblMsjApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(9, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 11);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nombre:";
+            this.lblMsjApellido.AutoSize = true;
+            this.lblMsjApellido.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsjApellido.ForeColor = System.Drawing.Color.Red;
+            this.lblMsjApellido.Location = new System.Drawing.Point(90, 144);
+            this.lblMsjApellido.Name = "lblMsjApellido";
+            this.lblMsjApellido.Size = new System.Drawing.Size(110, 12);
+            this.lblMsjApellido.TabIndex = 15;
+            this.lblMsjApellido.Text = "* Mensaje Error";
             // 
-            // label5
+            // lblMsjNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(9, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 11);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Apellido:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(92, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 13);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(9, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 11);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Telefono:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(92, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 13);
-            this.textBox2.TabIndex = 11;
+            this.lblMsjNombre.AutoSize = true;
+            this.lblMsjNombre.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsjNombre.ForeColor = System.Drawing.Color.Red;
+            this.lblMsjNombre.Location = new System.Drawing.Point(90, 103);
+            this.lblMsjNombre.Name = "lblMsjNombre";
+            this.lblMsjNombre.Size = new System.Drawing.Size(110, 12);
+            this.lblMsjNombre.TabIndex = 14;
+            this.lblMsjNombre.Text = "* Mensaje Error";
             // 
             // label7
             // 
@@ -195,49 +164,76 @@ namespace AdmPersonalTrainer.Clientes
             this.textBox3.Size = new System.Drawing.Size(209, 13);
             this.textBox3.TabIndex = 13;
             // 
-            // lblMsjNombre
+            // label6
             // 
-            this.lblMsjNombre.AutoSize = true;
-            this.lblMsjNombre.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMsjNombre.ForeColor = System.Drawing.Color.Red;
-            this.lblMsjNombre.Location = new System.Drawing.Point(90, 103);
-            this.lblMsjNombre.Name = "lblMsjNombre";
-            this.lblMsjNombre.Size = new System.Drawing.Size(110, 12);
-            this.lblMsjNombre.TabIndex = 14;
-            this.lblMsjNombre.Text = "* Mensaje Error";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(9, 172);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 11);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Telefono:";
             // 
-            // lblMsjApellido
+            // textBox2
             // 
-            this.lblMsjApellido.AutoSize = true;
-            this.lblMsjApellido.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMsjApellido.ForeColor = System.Drawing.Color.Red;
-            this.lblMsjApellido.Location = new System.Drawing.Point(90, 144);
-            this.lblMsjApellido.Name = "lblMsjApellido";
-            this.lblMsjApellido.Size = new System.Drawing.Size(110, 12);
-            this.lblMsjApellido.TabIndex = 15;
-            this.lblMsjApellido.Text = "* Mensaje Error";
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(92, 170);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(209, 13);
+            this.textBox2.TabIndex = 11;
             // 
-            // lblMsjTelefono
+            // label5
             // 
-            this.lblMsjTelefono.AutoSize = true;
-            this.lblMsjTelefono.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMsjTelefono.ForeColor = System.Drawing.Color.Red;
-            this.lblMsjTelefono.Location = new System.Drawing.Point(90, 186);
-            this.lblMsjTelefono.Name = "lblMsjTelefono";
-            this.lblMsjTelefono.Size = new System.Drawing.Size(110, 12);
-            this.lblMsjTelefono.TabIndex = 16;
-            this.lblMsjTelefono.Text = "* Mensaje Error";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(9, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 11);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Apellido:";
             // 
-            // lblMsjEmail
+            // textBox1
             // 
-            this.lblMsjEmail.AutoSize = true;
-            this.lblMsjEmail.Font = new System.Drawing.Font("Lucida Sans Typewriter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMsjEmail.ForeColor = System.Drawing.Color.Red;
-            this.lblMsjEmail.Location = new System.Drawing.Point(90, 229);
-            this.lblMsjEmail.Name = "lblMsjEmail";
-            this.lblMsjEmail.Size = new System.Drawing.Size(110, 12);
-            this.lblMsjEmail.TabIndex = 17;
-            this.lblMsjEmail.Text = "* Mensaje Error";
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(92, 128);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(209, 13);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(9, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 11);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nombre:";
+            // 
+            // txtClienteNombre
+            // 
+            this.txtClienteNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtClienteNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClienteNombre.Location = new System.Drawing.Point(92, 87);
+            this.txtClienteNombre.Name = "txtClienteNombre";
+            this.txtClienteNombre.Size = new System.Drawing.Size(209, 13);
+            this.txtClienteNombre.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 19);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "FORMULARIO CLIENTE";
             // 
             // button5
             // 
@@ -246,7 +242,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button5.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_bread_30;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(854, 549);
             this.button5.Name = "button5";
@@ -263,7 +259,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button4.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_fit_30;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(655, 549);
             this.button4.Name = "button4";
@@ -280,7 +276,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button3.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_delete_30;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(935, 493);
             this.button3.Name = "button3";
@@ -297,7 +293,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button2.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_edit_32;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(749, 493);
             this.button2.Name = "button2";
@@ -314,7 +310,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button1.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_add_32;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(563, 493);
             this.button1.Name = "button1";
@@ -324,12 +320,52 @@ namespace AdmPersonalTrainer.Clientes
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // dgvClientes
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvClientes.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.Location = new System.Drawing.Point(16, 188);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.Size = new System.Drawing.Size(537, 299);
+            this.dgvClientes.TabIndex = 1;
+            // 
             // ClientesTabla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1097, 615);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
@@ -337,14 +373,14 @@ namespace AdmPersonalTrainer.Clientes
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClientesTabla";
             this.Text = "ClientesTabla";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ClientesTabla_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,7 +389,6 @@ namespace AdmPersonalTrainer.Clientes
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -374,5 +409,6 @@ namespace AdmPersonalTrainer.Clientes
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }

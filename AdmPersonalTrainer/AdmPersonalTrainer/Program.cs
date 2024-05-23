@@ -16,7 +16,7 @@ namespace AdmPersonalTrainer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Iniciar_Sesion());
+            Application.Run(new Inicio());
         }
     }
 }

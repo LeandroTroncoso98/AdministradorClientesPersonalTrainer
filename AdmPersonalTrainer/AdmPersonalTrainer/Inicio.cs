@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using AdmPersonalTrainer.Clientes;
 
 namespace AdmPersonalTrainer
 {
@@ -18,7 +19,7 @@ namespace AdmPersonalTrainer
             InitializeComponent();
             BtnRestaurar.Visible = false;
         }
-
+        #region botones
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,11 +43,12 @@ namespace AdmPersonalTrainer
             BtnRestaurar.Visible = false;
             BtnMaximizar.Visible = true;
         }
-
+        #endregion
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
+        #region movimientoForm
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -58,6 +60,31 @@ namespace AdmPersonalTrainer
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+        private void AbrirFormChild(object formhijo)
+        {
+            if(this.Contenedor.Controls.Count > 0)
+            {
+                this.Contenedor.Controls.RemoveAt(0);
+                Form fh = formhijo as Form;
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.Fill;
+                this.Contenedor.Controls.Add(fh);
+                this.Contenedor.Tag = fh;
+                fh.Show();
+
+            }
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new ClientesTabla());
+        }
+
+        private void Contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

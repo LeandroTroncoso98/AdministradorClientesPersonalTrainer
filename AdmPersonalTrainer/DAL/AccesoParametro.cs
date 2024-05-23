@@ -11,7 +11,7 @@ namespace DAL
 {
     public class AccesoParametro
     {
-        private SqlConnection oCnn = new SqlConnection(@"Data Source=DESKTOP-KB5GB1U\SQLSERVER;Initial Catalog=ADMPT;Integrated Security=True");
+        private SqlConnection oCnn = new SqlConnection(@"Data Source=DESKTOP-KB5GB1U\SQLEXPRESS01;Initial Catalog=ADMPT;Integrated Security=True");
         private SqlCommand cmd;
         private SqlTransaction Trx;
         public DataTable leer(string consulta, ArrayList parametros)

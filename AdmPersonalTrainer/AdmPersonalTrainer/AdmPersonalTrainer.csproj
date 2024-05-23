@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes\ClientesTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClientesTabla.Designer.cs">
+      <DependentUpon>ClientesTabla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clientes\ClientesTabla.resx">
+      <DependentUpon>ClientesTabla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Iniciar Sesion.resx">
       <DependentUpon>Iniciar Sesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,18 +77,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -90,43 +99,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-close-48.png" />
+    <None Include="Resources\icons8-edit-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-minimize-64.png" />
+    <None Include="Resources\icons8-fit-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-people-60.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-maximize-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image-removebg-preview %2825%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Asesorias-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-trainer-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-cash-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-select-users-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-human-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-bread-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-user-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-password-50.png" />
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{037136BB-C436-4B41-822F-39D6BE354C26}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{14DA623A-92EE-42A3-BF5E-DD6C9DF850D3}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

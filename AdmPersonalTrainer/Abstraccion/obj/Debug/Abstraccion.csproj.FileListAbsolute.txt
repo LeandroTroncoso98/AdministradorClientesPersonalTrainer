@@ -1,0 +1,6 @@
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\bin\Debug\Abstraccion.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\bin\Debug\Abstraccion.pdb
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\obj\Debug\Abstraccion.csproj.AssemblyReference.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\obj\Debug\Abstraccion.csproj.CoreCompileInputs.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\obj\Debug\Abstraccion.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Abstraccion\obj\Debug\Abstraccion.pdb

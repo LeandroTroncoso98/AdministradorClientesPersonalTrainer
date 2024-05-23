@@ -29,12 +29,14 @@ namespace AdmPersonalTrainer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnRestaurar = new System.Windows.Forms.PictureBox();
             this.BtnMaximizar = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -45,11 +47,15 @@ namespace AdmPersonalTrainer
             this.button1 = new System.Windows.Forms.Button();
             this.BtnClientes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
+            this.Contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,8 +77,8 @@ namespace AdmPersonalTrainer
             // BtnRestaurar
             // 
             this.BtnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnRestaurar.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_maximize_64;
-            this.BtnRestaurar.Location = new System.Drawing.Point(1236, 6);
+            this.BtnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRestaurar.Image")));
+            this.BtnRestaurar.Location = new System.Drawing.Point(1236, 7);
             this.BtnRestaurar.Name = "BtnRestaurar";
             this.BtnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.BtnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,7 +89,7 @@ namespace AdmPersonalTrainer
             // BtnMaximizar
             // 
             this.BtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMaximizar.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_maximize_64;
+            this.BtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaximizar.Image")));
             this.BtnMaximizar.Location = new System.Drawing.Point(1236, 6);
             this.BtnMaximizar.Name = "BtnMaximizar";
             this.BtnMaximizar.Size = new System.Drawing.Size(25, 25);
@@ -95,7 +101,7 @@ namespace AdmPersonalTrainer
             // BtnMinimizar
             // 
             this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMinimizar.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_minimize_64;
+            this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
             this.BtnMinimizar.Location = new System.Drawing.Point(1205, 6);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(25, 25);
@@ -108,7 +114,7 @@ namespace AdmPersonalTrainer
             // 
             this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BtnCerrar.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_close_48;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
             this.BtnCerrar.Location = new System.Drawing.Point(1267, 6);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(25, 25);
@@ -120,16 +126,28 @@ namespace AdmPersonalTrainer
             // Contenedor
             // 
             this.Contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.Contenedor.Controls.Add(this.pictureBox2);
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(203, 35);
             this.Contenedor.Name = "Contenedor";
             this.Contenedor.Size = new System.Drawing.Size(1097, 615);
             this.Contenedor.TabIndex = 2;
+            this.Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.Contenedor_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(328, 177);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(480, 275);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(0, 404);
+            this.panel4.Location = new System.Drawing.Point(0, 353);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(12, 62);
             this.panel4.TabIndex = 5;
@@ -137,7 +155,7 @@ namespace AdmPersonalTrainer
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.panel5.Location = new System.Drawing.Point(0, 493);
+            this.panel5.Location = new System.Drawing.Point(0, 441);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(12, 62);
             this.panel5.TabIndex = 7;
@@ -145,7 +163,9 @@ namespace AdmPersonalTrainer
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.MenuVertical.Controls.Add(this.panel6);
             this.MenuVertical.Controls.Add(this.panel5);
+            this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.panel3);
@@ -166,9 +186,9 @@ namespace AdmPersonalTrainer
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_bread_48;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 493);
+            this.button3.Location = new System.Drawing.Point(12, 441);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(191, 62);
             this.button3.TabIndex = 6;
@@ -179,7 +199,7 @@ namespace AdmPersonalTrainer
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.panel3.Location = new System.Drawing.Point(0, 309);
+            this.panel3.Location = new System.Drawing.Point(0, 265);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(12, 62);
             this.panel3.TabIndex = 3;
@@ -190,9 +210,9 @@ namespace AdmPersonalTrainer
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_trainer_48;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 404);
+            this.button2.Location = new System.Drawing.Point(12, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 62);
             this.button2.TabIndex = 4;
@@ -203,7 +223,7 @@ namespace AdmPersonalTrainer
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.panel2.Location = new System.Drawing.Point(0, 208);
+            this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(12, 62);
             this.panel2.TabIndex = 1;
@@ -215,9 +235,9 @@ namespace AdmPersonalTrainer
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_cash_48;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 309);
+            this.button1.Location = new System.Drawing.Point(12, 265);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 62);
             this.button1.TabIndex = 2;
@@ -231,25 +251,50 @@ namespace AdmPersonalTrainer
             this.BtnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClientes.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClientes.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_human_48;
+            this.BtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("BtnClientes.Image")));
             this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClientes.Location = new System.Drawing.Point(12, 208);
+            this.BtnClientes.Location = new System.Drawing.Point(12, 177);
             this.BtnClientes.Name = "BtnClientes";
             this.BtnClientes.Size = new System.Drawing.Size(191, 62);
             this.BtnClientes.TabIndex = 0;
             this.BtnClientes.Text = "CLIENTES";
             this.BtnClientes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BtnClientes.UseVisualStyleBackColor = true;
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AdmPersonalTrainer.Properties.Resources.Asesorias_removebg_preview;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.panel6.Location = new System.Drawing.Point(0, 529);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(12, 62);
+            this.panel6.TabIndex = 9;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(12, 529);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(191, 62);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "OPCIONES";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Inicio
             // 
@@ -268,6 +313,8 @@ namespace AdmPersonalTrainer
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
+            this.Contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -292,5 +339,8 @@ namespace AdmPersonalTrainer
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnClientes;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button4;
     }
 }
