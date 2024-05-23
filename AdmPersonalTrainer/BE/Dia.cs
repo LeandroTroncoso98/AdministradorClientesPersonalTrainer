@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Ejercicio : IIdentity
+    public class Dia : IIdentity
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public string LinkVideo { get; set; }
+        public List<Ejercicio> Ejercicios { get; set; }
+
     }
 }

@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Cuenta.cs" />
+    <Compile Include="Dia.cs" />
     <Compile Include="Ejercicio.cs" />
     <Compile Include="Entrenador.cs" />
     <Compile Include="EnumEstado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rutina.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
