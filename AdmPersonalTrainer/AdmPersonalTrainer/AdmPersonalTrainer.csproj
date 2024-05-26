@@ -119,6 +119,16 @@
       <Project>{14DA623A-92EE-42A3-BF5E-DD6C9DF850D3}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{09EA2291-7DB6-4990-8F6D-452306C2E8A8}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asesorias-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

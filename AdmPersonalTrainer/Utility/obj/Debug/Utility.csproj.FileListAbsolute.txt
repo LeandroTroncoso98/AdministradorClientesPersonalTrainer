@@ -1,0 +1,6 @@
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\bin\Debug\Utility.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\bin\Debug\Utility.pdb
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\obj\Debug\Utility.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\Utility\obj\Debug\Utility.pdb

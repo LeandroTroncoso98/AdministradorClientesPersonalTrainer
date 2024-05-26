@@ -63,6 +63,26 @@ namespace AdmPersonalTrainer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asesorias_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Asesorias-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_maximize_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-maximize-64", resourceCulture);

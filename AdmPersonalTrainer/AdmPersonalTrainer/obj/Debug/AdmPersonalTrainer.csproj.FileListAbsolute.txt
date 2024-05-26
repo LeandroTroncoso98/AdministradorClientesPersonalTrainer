@@ -21,3 +21,5 @@ C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal t
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\bin\Debug\Mapper.pdb
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\bin\Debug\DAL.pdb
 C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\obj\Debug\AdmPersonalTrainer.csproj.CopyComplete
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\bin\Debug\Utility.dll
+C:\Users\herei\OneDrive\Escritorio\Proyectos\Winform\Administrador de Personal tr\AdministradorClientesPersonalTrainer\AdmPersonalTrainer\AdmPersonalTrainer\bin\Debug\Utility.pdb

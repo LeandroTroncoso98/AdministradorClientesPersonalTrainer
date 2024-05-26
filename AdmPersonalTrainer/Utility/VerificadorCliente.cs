@@ -9,44 +9,38 @@ namespace Utility
 {
     public class VerificadorCliente : Verificador
     {
-        public bool CheckNombre(TextBox txtnombre)
+        public bool CheckForm(TextBox txtNombre,TextBox txtApellido, TextBox txtEmail, TextBox txtNumero)
         {
-            if (!CampoVacio(txtnombre))
+            if (!CampoVacio(txtNombre))
             {
-                return true;
-            }
-            return false;
-        }
-        public bool CheckApellido(TextBox txtApellido)
-        {
-            if (!CampoVacio(txtApellido))
-            {
-                return true;
-            }
-            return false;
-        }
-        public bool CheckEmail(TextBox txtEmail)
-        {
-            if (!CampoVacio(txtEmail))
-            {
-                if (FormatoCorreo(txtEmail))
+                if (!CampoVacio(txtApellido))
                 {
-                    return true;
+                    if (!CampoVacio(txtEmail))
+                    {
+                        if (FormatoCorreo(txtEmail))
+                        {
+                            if (!CampoVacio(txtNumero))
+                            {
+                                if (EsNumerico(txtNumero))
+                                {
+                                    return true;
+                                }
+                                MessageBox.Show("Debe ser un campo numero.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return false;
+                            }
+                            MessageBox.Show("Debe completar el campo de numero telefonico.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                        MessageBox.Show("El formato del correo no es correcto.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    MessageBox.Show("Debe completar el campo el campo de email.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
+                MessageBox.Show("Debe completar el campo apellido.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            return false;
-        }
-        public bool CheckNumero(TextBox txtNumero)
-        {
-            if (!CampoVacio(txtNumero))
-            {
-                if (EsNumerico(txtNumero))
-                {
-                    return true;
-                }
-                return false;
-            }
+            MessageBox.Show("Debe completar el campo nombre.", "Error Formulario Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
     }
