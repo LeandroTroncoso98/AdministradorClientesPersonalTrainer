@@ -15,9 +15,17 @@ namespace Negocio
             oMPPCliente = new MPPCliente();
         }
         MPPCliente oMPPCliente;
-        public List<Cliente> ListarClientes()
+        public List<Cliente> Listar()
         {
-            return oMPPCliente.ListarClientes();
+            return oMPPCliente.Listar();
+        }
+        public bool Agregar(Cliente cliente)
+        {
+            return oMPPCliente.Agregar(cliente);
+        }
+        public bool Actualizar(Cliente cliente)
+        {
+            return oMPPCliente.Actualizar(cliente);
         }
     }
 }
