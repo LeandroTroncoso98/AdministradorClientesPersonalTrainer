@@ -47,7 +47,7 @@ namespace AdmPersonalTrainer.Clientes
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBorrarCliente = new System.Windows.Forms.Button();
             this.BtnEditarCliente = new System.Windows.Forms.Button();
             this.BtnCrearCliente = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
@@ -66,7 +66,7 @@ namespace AdmPersonalTrainer.Clientes
             this.label1.Location = new System.Drawing.Point(15, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 19);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 7;
             this.label1.Text = "LISTA DE CLIENTES";
             // 
             // label2
@@ -76,7 +76,7 @@ namespace AdmPersonalTrainer.Clientes
             this.label2.Location = new System.Drawing.Point(385, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(355, 29);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 9;
             this.label2.Text = "GESTION DE CLIENTES";
             // 
             // panel1
@@ -94,7 +94,7 @@ namespace AdmPersonalTrainer.Clientes
             this.panel1.Location = new System.Drawing.Point(563, 188);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(522, 299);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 1;
             // 
             // label7
             // 
@@ -114,7 +114,7 @@ namespace AdmPersonalTrainer.Clientes
             this.txtEmail.Location = new System.Drawing.Point(92, 213);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(209, 13);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.TabIndex = 4;
             // 
             // label6
             // 
@@ -132,9 +132,10 @@ namespace AdmPersonalTrainer.Clientes
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Location = new System.Drawing.Point(92, 170);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 13);
-            this.txtTelefono.TabIndex = 11;
+            this.txtTelefono.TabIndex = 3;
             // 
             // label5
             // 
@@ -154,7 +155,7 @@ namespace AdmPersonalTrainer.Clientes
             this.txtApellido.Location = new System.Drawing.Point(92, 128);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(209, 13);
-            this.txtApellido.TabIndex = 9;
+            this.txtApellido.TabIndex = 2;
             // 
             // label4
             // 
@@ -174,7 +175,7 @@ namespace AdmPersonalTrainer.Clientes
             this.txtNombre.Location = new System.Drawing.Point(92, 87);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(209, 13);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // label3
             // 
@@ -199,7 +200,7 @@ namespace AdmPersonalTrainer.Clientes
             this.button5.Location = new System.Drawing.Point(854, 549);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 8;
+            this.button5.TabIndex = 6;
             this.button5.Text = "Mostrar Dieta";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
@@ -216,27 +217,28 @@ namespace AdmPersonalTrainer.Clientes
             this.button4.Location = new System.Drawing.Point(655, 549);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 5;
             this.button4.Text = "Mostrar Rutina";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnBorrarCliente
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(935, 493);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Borrar Cliente";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBorrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.btnBorrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.btnBorrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnBorrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarCliente.Image")));
+            this.btnBorrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrarCliente.Location = new System.Drawing.Point(935, 493);
+            this.btnBorrarCliente.Name = "btnBorrarCliente";
+            this.btnBorrarCliente.Size = new System.Drawing.Size(150, 50);
+            this.btnBorrarCliente.TabIndex = 4;
+            this.btnBorrarCliente.Text = "Borrar Cliente";
+            this.btnBorrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBorrarCliente.UseVisualStyleBackColor = false;
+            this.btnBorrarCliente.Click += new System.EventHandler(this.btnBorrarCliente_Click);
             // 
             // BtnEditarCliente
             // 
@@ -250,7 +252,7 @@ namespace AdmPersonalTrainer.Clientes
             this.BtnEditarCliente.Location = new System.Drawing.Point(749, 493);
             this.BtnEditarCliente.Name = "BtnEditarCliente";
             this.BtnEditarCliente.Size = new System.Drawing.Size(150, 50);
-            this.BtnEditarCliente.TabIndex = 4;
+            this.BtnEditarCliente.TabIndex = 3;
             this.BtnEditarCliente.Text = "Editar Cliente";
             this.BtnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditarCliente.UseVisualStyleBackColor = false;
@@ -268,7 +270,7 @@ namespace AdmPersonalTrainer.Clientes
             this.BtnCrearCliente.Location = new System.Drawing.Point(563, 493);
             this.BtnCrearCliente.Name = "BtnCrearCliente";
             this.BtnCrearCliente.Size = new System.Drawing.Size(150, 50);
-            this.BtnCrearCliente.TabIndex = 3;
+            this.BtnCrearCliente.TabIndex = 2;
             this.BtnCrearCliente.Text = "Crear Cliente";
             this.BtnCrearCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCrearCliente.UseVisualStyleBackColor = false;
@@ -313,8 +315,8 @@ namespace AdmPersonalTrainer.Clientes
             this.dgvClientes.Location = new System.Drawing.Point(12, 293);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersVisible = false;
-            this.dgvClientes.Size = new System.Drawing.Size(537, 250);
-            this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.Size = new System.Drawing.Size(537, 306);
+            this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // panel2
@@ -325,7 +327,7 @@ namespace AdmPersonalTrainer.Clientes
             this.panel2.Location = new System.Drawing.Point(12, 188);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(537, 67);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 0;
             // 
             // txtFiltro
             // 
@@ -334,7 +336,7 @@ namespace AdmPersonalTrainer.Clientes
             this.txtFiltro.Location = new System.Drawing.Point(222, 28);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(300, 13);
-            this.txtFiltro.TabIndex = 18;
+            this.txtFiltro.TabIndex = 1;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // label8
@@ -359,7 +361,7 @@ namespace AdmPersonalTrainer.Clientes
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnBorrarCliente);
             this.Controls.Add(this.BtnEditarCliente);
             this.Controls.Add(this.BtnCrearCliente);
             this.Controls.Add(this.label2);
@@ -384,7 +386,7 @@ namespace AdmPersonalTrainer.Clientes
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnCrearCliente;
         private System.Windows.Forms.Button BtnEditarCliente;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBorrarCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;

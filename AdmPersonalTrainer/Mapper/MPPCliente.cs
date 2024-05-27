@@ -47,6 +47,36 @@ namespace Mapper
                 throw ex;
             }
         }
+        public bool ExisteEmail(string email,int idException = 0)
+        {
+            try
+            {
+                _accParametro = new AccesoParametro();
+                _al = new ArrayList();
+                string query = "SpCliente_EmailExiste";
+                SqlParameter prm1 = new SqlParameter("@Id", SqlDbType.Int);
+                prm1.Value = idException;
+                _al.Add(prm1);
+                DataTable table = _accParametro.leer(query, _al);
+                if (table.Rows.Count > 0)
+                {
+                    List<Cliente> clientes = new List<Cliente>();
+                    foreach(DataRow row in table.Rows)
+                    {
+                        Cliente nCliente = new Cliente();
+                        nCliente.Id = Convert.ToInt32(row[0]);
+                        nCliente.Email = row[1].ToString();
+                        clientes.Add(nCliente);
+                    }
+                    return clientes.Any(m => m.Email.Trim().ToLower() == email.Trim().ToLower());
+                }
+                else return false;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
         public bool Agregar(Cliente nCliente)
         {
             try
@@ -89,10 +119,29 @@ namespace Mapper
                 SqlParameter prm3 = new SqlParameter("@Apellido", SqlDbType.NChar);
                 prm3.Value = aCliente.Apellido;
                 _al.Add(prm3);
-                SqlParameter prm4 = new SqlParameter("@Numero", SqlDbType.Char);
+                SqlParameter prm4 = new SqlParameter("@Numero", SqlDbType.NChar);
                 prm4.Value = aCliente.TelefonoNum;
+                _al.Add(prm4);
                 SqlParameter prm5 = new SqlParameter("@Email", SqlDbType.NVarChar);
                 prm5.Value = aCliente.Email;
+                _al.Add(prm5);
+                return _accParametro.Escribir(query, _al);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Borrar(int id)
+        {
+            try
+            {
+                string query = "SpCliente_Borrar";
+                _accParametro = new AccesoParametro();
+                _al = new ArrayList();
+                SqlParameter prm1 = new SqlParameter("@Id", SqlDbType.Int);
+                prm1.Value = id;
+                _al.Add(prm1);
                 return _accParametro.Escribir(query, _al);
             }
             catch(Exception ex)

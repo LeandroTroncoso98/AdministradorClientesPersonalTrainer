@@ -27,5 +27,13 @@ namespace Negocio
         {
             return oMPPCliente.Actualizar(cliente);
         }
+        public bool ExisteEmail(string email, int idException = 0)
+        {
+            return oMPPCliente.ExisteEmail(email, idException);
+        }
+        public bool Borrar(int id)
+        {
+            return oMPPCliente.Borrar(id);
+        }
     }
 }

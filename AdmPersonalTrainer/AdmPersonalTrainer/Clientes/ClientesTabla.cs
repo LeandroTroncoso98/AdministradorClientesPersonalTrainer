@@ -23,7 +23,7 @@ namespace AdmPersonalTrainer.Clientes
         {
             _BLLCliente = new BLLCliente();
             _VerificadorCliente = new VerificadorCliente();
-            _ClienteSelect = new Cliente();
+            _ClienteSelect = null;
             InitializeComponent();
         }
         private void ClientesTabla_Load(object sender, EventArgs e)
@@ -92,15 +92,21 @@ namespace AdmPersonalTrainer.Clientes
                     cliente.Apellido = txtApellido.Text;
                     cliente.TelefonoNum = txtTelefono.Text;
                     cliente.Email = txtEmail.Text;
-                    if (_BLLCliente.Agregar(cliente))
+                    if (!_BLLCliente.ExisteEmail(cliente.Email))
                     {
-                        MessageBox.Show("Se ha agregado con exíto.");
-                        CargardgvCliente();
-                        VaciasCampos();
+                        if (_BLLCliente.Agregar(cliente))
+                        {
+                            MessageBox.Show("Se ha agregado con exíto.");
+                            CargardgvCliente();
+                            VaciasCampos();
+                            _ClienteSelect = null;
+                        }
                     }
+                    else MessageBox.Show("El correo electronico ya lo posee otro usuario.", "Agregar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ha ocurrido el siguiente error.\nCausa: {ex}", "Agregar cliente.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -110,12 +116,35 @@ namespace AdmPersonalTrainer.Clientes
         {
             try
             {
-                if (_VerificadorCliente.CheckForm(txtNombre, txtApellido, txtEmail, txtTelefono))
+                if (_ClienteSelect != null)
                 {
-                    Cliente clienteAct = new Cliente();
+                    if (_VerificadorCliente.CheckForm(txtNombre, txtApellido, txtEmail, txtTelefono))
+                    {
+
+                        if (_VerificadorCliente.CheckForm(txtNombre, txtApellido, txtEmail, txtTelefono))
+                        {
+                            if (!_BLLCliente.ExisteEmail(txtEmail.Text, _ClienteSelect.Id))
+                            {
+                                _ClienteSelect.Nombre = txtNombre.Text;
+                                _ClienteSelect.Apellido = txtApellido.Text;
+                                _ClienteSelect.Email = txtEmail.Text;
+                                _ClienteSelect.TelefonoNum = txtTelefono.Text;
+                                if (_BLLCliente.Actualizar(_ClienteSelect))
+                                {
+                                    MessageBox.Show("Se ha actualizado con exíto");
+                                    VaciasCampos();
+                                    _ClienteSelect = null;
+                                    CargardgvCliente();
+                                }
+                            }
+                            else MessageBox.Show("El correo electronico ya lo posee otro usuario.", "Actualizar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
+                else MessageBox.Show("Debe seleccionar un cliente.", "Actualizar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ha ocurrido el siguiente error.\nCausa: {ex}", "Actualizar cliente.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -131,9 +160,35 @@ namespace AdmPersonalTrainer.Clientes
                 txtTelefono.Text = _ClienteSelect.TelefonoNum;
                 txtEmail.Text = _ClienteSelect.Email;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ha ocurrido el siguiente error.\nCausa: {ex}", "Seleccionar cliente.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBorrarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(_ClienteSelect != null)
+                {
+                    DialogResult resultado = MessageBox.Show($"¿Esta seguro de que desea eliminar a {_ClienteSelect.Nombre} {_ClienteSelect.Apellido} de la base de datos?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if(resultado == DialogResult.Yes)
+                    {
+                        if (_BLLCliente.Borrar(_ClienteSelect.Id))
+                        {
+                            MessageBox.Show("Se ha borrado con exíto");
+                            VaciasCampos();
+                            CargardgvCliente();
+                            _ClienteSelect = null;
+                        }
+                    }
+                }
+                else MessageBox.Show($"Debe seleccionar un cliente.", "Borrar cliente.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ha ocurrido el siguiente error.\nCausa: {ex}", "Borrar cliente.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
