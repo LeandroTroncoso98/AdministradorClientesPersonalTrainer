@@ -1,4 +1,5 @@
-﻿using BE;
+﻿using Abstraccion;
+using BE;
 using DAL;
 using System;
 using System.Collections;
@@ -11,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace Mapper
 {
-    public class MPPCliente
+    public class MPPCliente : IAdministrable<Cliente>
     {
         private AccesoParametro _accParametro;
         private ArrayList _al;
 
-        public List<Cliente> Listar()
+        public List<Cliente> Listar() 
         {
             try
             {
@@ -143,6 +144,22 @@ namespace Mapper
                 prm1.Value = id;
                 _al.Add(prm1);
                 return _accParametro.Escribir(query, _al);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool RutinaAsociada(int id)
+        {
+            try
+            {
+                string query = "SpCliente_RutinaAsociada";
+                _accParametro = new AccesoParametro();
+                _al = new ArrayList();
+                SqlParameter prm1 = new SqlParameter("@Id_Usuario", SqlDbType.Int);
+                prm1.Value = id;
+                return _accParametro.LeerScalar(query, _al);
             }
             catch(Exception ex)
             {
