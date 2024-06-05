@@ -52,6 +52,12 @@
     <Compile Include="Clientes\ClientesTabla.Designer.cs">
       <DependentUpon>ClientesTabla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Cuentas.Designer.cs">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clientes\ClientesTabla.resx">
       <DependentUpon>ClientesTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Cuentas.resx">
+      <DependentUpon>Cuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar Sesion.resx">
       <DependentUpon>Iniciar Sesion.cs</DependentUpon>
@@ -129,6 +138,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Asesorias-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-32 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

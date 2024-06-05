@@ -46,7 +46,7 @@ namespace AdmPersonalTrainer
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEstadoCuenta = new System.Windows.Forms.Button();
             this.BtnClientes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -171,7 +171,7 @@ namespace AdmPersonalTrainer
             this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Controls.Add(this.panel2);
-            this.MenuVertical.Controls.Add(this.button1);
+            this.MenuVertical.Controls.Add(this.btnEstadoCuenta);
             this.MenuVertical.Controls.Add(this.BtnClientes);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -253,21 +253,22 @@ namespace AdmPersonalTrainer
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button1
+            // btnEstadoCuenta
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 62);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "ESTADO DE CUENTA";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEstadoCuenta.FlatAppearance.BorderSize = 0;
+            this.btnEstadoCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnEstadoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadoCuenta.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadoCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnEstadoCuenta.Image")));
+            this.btnEstadoCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadoCuenta.Location = new System.Drawing.Point(12, 265);
+            this.btnEstadoCuenta.Name = "btnEstadoCuenta";
+            this.btnEstadoCuenta.Size = new System.Drawing.Size(191, 62);
+            this.btnEstadoCuenta.TabIndex = 2;
+            this.btnEstadoCuenta.Text = "ESTADO DE CUENTA";
+            this.btnEstadoCuenta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnEstadoCuenta.UseVisualStyleBackColor = true;
+            this.btnEstadoCuenta.Click += new System.EventHandler(this.btnEstadoCuenta_Click);
             // 
             // BtnClientes
             // 
@@ -338,7 +339,7 @@ namespace AdmPersonalTrainer
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEstadoCuenta;
         private System.Windows.Forms.Button BtnClientes;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel6;

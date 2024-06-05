@@ -29,10 +29,10 @@ namespace AdmPersonalTrainer.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesTabla));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesTabla));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,15 +45,15 @@ namespace AdmPersonalTrainer.Clientes
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnBorrarCliente = new System.Windows.Forms.Button();
             this.BtnEditarCliente = new System.Windows.Forms.Button();
             this.BtnCrearCliente = new System.Windows.Forms.Button();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.panel2.SuspendLayout();
@@ -63,7 +63,7 @@ namespace AdmPersonalTrainer.Clientes
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(15, 271);
+            this.label1.Location = new System.Drawing.Point(15, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 19);
             this.label1.TabIndex = 7;
@@ -73,7 +73,7 @@ namespace AdmPersonalTrainer.Clientes
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 65);
+            this.label2.Location = new System.Drawing.Point(7, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(355, 29);
             this.label2.TabIndex = 9;
@@ -91,7 +91,7 @@ namespace AdmPersonalTrainer.Clientes
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(563, 188);
+            this.panel1.Location = new System.Drawing.Point(563, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(522, 299);
             this.panel1.TabIndex = 1;
@@ -188,94 +188,6 @@ namespace AdmPersonalTrainer.Clientes
             this.label3.TabIndex = 7;
             this.label3.Text = "FORMULARIO CLIENTE";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(854, 549);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Mostrar Dieta";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(655, 549);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Mostrar Rutina";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // btnBorrarCliente
-            // 
-            this.btnBorrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.btnBorrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.btnBorrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnBorrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarCliente.Image")));
-            this.btnBorrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrarCliente.Location = new System.Drawing.Point(935, 493);
-            this.btnBorrarCliente.Name = "btnBorrarCliente";
-            this.btnBorrarCliente.Size = new System.Drawing.Size(150, 50);
-            this.btnBorrarCliente.TabIndex = 4;
-            this.btnBorrarCliente.Text = "Borrar Cliente";
-            this.btnBorrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBorrarCliente.UseVisualStyleBackColor = false;
-            this.btnBorrarCliente.Click += new System.EventHandler(this.btnBorrarCliente_Click);
-            // 
-            // BtnEditarCliente
-            // 
-            this.BtnEditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.BtnEditarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.BtnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.BtnEditarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditarCliente.Image")));
-            this.BtnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditarCliente.Location = new System.Drawing.Point(749, 493);
-            this.BtnEditarCliente.Name = "BtnEditarCliente";
-            this.BtnEditarCliente.Size = new System.Drawing.Size(150, 50);
-            this.BtnEditarCliente.TabIndex = 3;
-            this.BtnEditarCliente.Text = "Editar Cliente";
-            this.BtnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEditarCliente.UseVisualStyleBackColor = false;
-            this.BtnEditarCliente.Click += new System.EventHandler(this.BtnEditarCliente_Click);
-            // 
-            // BtnCrearCliente
-            // 
-            this.BtnCrearCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.BtnCrearCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
-            this.BtnCrearCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCrearCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCrearCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.BtnCrearCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCrearCliente.Image")));
-            this.BtnCrearCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCrearCliente.Location = new System.Drawing.Point(563, 493);
-            this.BtnCrearCliente.Name = "BtnCrearCliente";
-            this.BtnCrearCliente.Size = new System.Drawing.Size(150, 50);
-            this.BtnCrearCliente.TabIndex = 2;
-            this.BtnCrearCliente.Text = "Crear Cliente";
-            this.BtnCrearCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCrearCliente.UseVisualStyleBackColor = false;
-            this.BtnCrearCliente.Click += new System.EventHandler(this.BtnCrearCliente_Click);
-            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToResizeColumns = false;
@@ -312,7 +224,7 @@ namespace AdmPersonalTrainer.Clientes
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.EnableHeadersVisualStyles = false;
-            this.dgvClientes.Location = new System.Drawing.Point(12, 293);
+            this.dgvClientes.Location = new System.Drawing.Point(12, 225);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.Size = new System.Drawing.Size(537, 306);
@@ -324,7 +236,7 @@ namespace AdmPersonalTrainer.Clientes
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
             this.panel2.Controls.Add(this.txtFiltro);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(12, 188);
+            this.panel2.Location = new System.Drawing.Point(12, 120);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(537, 67);
             this.panel2.TabIndex = 0;
@@ -349,6 +261,94 @@ namespace AdmPersonalTrainer.Clientes
             this.label8.Size = new System.Drawing.Size(213, 19);
             this.label8.TabIndex = 18;
             this.label8.Text = "FILTRAR CLIENTES:";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(854, 481);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 50);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Mostrar Dieta";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(655, 481);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 50);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Mostrar Rutina";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // btnBorrarCliente
+            // 
+            this.btnBorrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.btnBorrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.btnBorrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnBorrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarCliente.Image")));
+            this.btnBorrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrarCliente.Location = new System.Drawing.Point(935, 425);
+            this.btnBorrarCliente.Name = "btnBorrarCliente";
+            this.btnBorrarCliente.Size = new System.Drawing.Size(150, 50);
+            this.btnBorrarCliente.TabIndex = 4;
+            this.btnBorrarCliente.Text = "Borrar Cliente";
+            this.btnBorrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBorrarCliente.UseVisualStyleBackColor = false;
+            this.btnBorrarCliente.Click += new System.EventHandler(this.btnBorrarCliente_Click);
+            // 
+            // BtnEditarCliente
+            // 
+            this.BtnEditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.BtnEditarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.BtnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.BtnEditarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditarCliente.Image")));
+            this.BtnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditarCliente.Location = new System.Drawing.Point(749, 425);
+            this.BtnEditarCliente.Name = "BtnEditarCliente";
+            this.BtnEditarCliente.Size = new System.Drawing.Size(150, 50);
+            this.BtnEditarCliente.TabIndex = 3;
+            this.BtnEditarCliente.Text = "Editar Cliente";
+            this.BtnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEditarCliente.UseVisualStyleBackColor = false;
+            this.BtnEditarCliente.Click += new System.EventHandler(this.BtnEditarCliente_Click);
+            // 
+            // BtnCrearCliente
+            // 
+            this.BtnCrearCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.BtnCrearCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
+            this.BtnCrearCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCrearCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCrearCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.BtnCrearCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCrearCliente.Image")));
+            this.BtnCrearCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCrearCliente.Location = new System.Drawing.Point(563, 425);
+            this.BtnCrearCliente.Name = "BtnCrearCliente";
+            this.BtnCrearCliente.Size = new System.Drawing.Size(150, 50);
+            this.BtnCrearCliente.TabIndex = 2;
+            this.BtnCrearCliente.Text = "Crear Cliente";
+            this.BtnCrearCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCrearCliente.UseVisualStyleBackColor = false;
+            this.BtnCrearCliente.Click += new System.EventHandler(this.BtnCrearCliente_Click);
             // 
             // ClientesTabla
             // 

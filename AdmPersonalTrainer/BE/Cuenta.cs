@@ -14,5 +14,6 @@ namespace BE
         public DateTime FechaPago { get; set; }
         public DateTime FechaVencimiento { get; set; }
         public decimal Monto { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }

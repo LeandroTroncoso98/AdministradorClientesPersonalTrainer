@@ -86,5 +86,10 @@ namespace AdmPersonalTrainer
         {
 
         }
+
+        private void btnEstadoCuenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new Cuentas());
+        }
     }
 }

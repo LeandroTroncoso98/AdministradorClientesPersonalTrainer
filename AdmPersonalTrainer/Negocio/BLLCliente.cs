@@ -35,5 +35,9 @@ namespace Negocio
         {
             return oMPPCliente.Borrar(id);
         }
+        public bool RutinaAsociada(int id)
+        {
+            return oMPPCliente.RutinaAsociada(id);
+        }
     }
 }

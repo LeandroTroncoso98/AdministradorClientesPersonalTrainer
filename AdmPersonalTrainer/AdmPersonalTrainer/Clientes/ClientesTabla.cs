@@ -16,7 +16,7 @@ namespace AdmPersonalTrainer.Clientes
     public partial class ClientesTabla : Form
     {
         private BLLCliente _BLLCliente;
-        public List<Cliente> listaClientes;
+        private List<Cliente> listaClientes;
         private VerificadorCliente _VerificadorCliente;
         private Cliente _ClienteSelect;
         public ClientesTabla()
