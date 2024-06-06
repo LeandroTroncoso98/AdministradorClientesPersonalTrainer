@@ -16,12 +16,14 @@ namespace AdmPersonalTrainer.Clientes
     public partial class ClientesTabla : Form
     {
         private BLLCliente _BLLCliente;
+        private BLLCuenta _BLLCuenta;
         private List<Cliente> listaClientes;
         private VerificadorCliente _VerificadorCliente;
         private Cliente _ClienteSelect;
         public ClientesTabla()
         {
             _BLLCliente = new BLLCliente();
+            _BLLCuenta = new BLLCuenta();
             _VerificadorCliente = new VerificadorCliente();
             _ClienteSelect = null;
             InitializeComponent();
@@ -172,15 +174,18 @@ namespace AdmPersonalTrainer.Clientes
             {
                 if(_ClienteSelect != null)
                 {
-                    DialogResult resultado = MessageBox.Show($"¿Esta seguro de que desea eliminar a {_ClienteSelect.Nombre} {_ClienteSelect.Apellido} de la base de datos?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult resultado = MessageBox.Show($"Al borrar al cliente borrara su estado de cuenta para siempre.\n¿Esta seguro de que desea eliminar a {_ClienteSelect.Nombre} {_ClienteSelect.Apellido} de la base de datos?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                     if(resultado == DialogResult.Yes)
                     {
-                        if (_BLLCliente.Borrar(_ClienteSelect.Id))
+                        if (_BLLCuenta.Borrar(_ClienteSelect.Id))
                         {
-                            MessageBox.Show("Se ha borrado con exíto");
-                            VaciasCampos();
-                            CargardgvCliente();
-                            _ClienteSelect = null;
+                            if (_BLLCliente.Borrar(_ClienteSelect.Id))
+                            {
+                                MessageBox.Show("Se ha borrado con exíto");
+                                VaciasCampos();
+                                CargardgvCliente();
+                                _ClienteSelect = null;
+                            }
                         }
                     }
                 }

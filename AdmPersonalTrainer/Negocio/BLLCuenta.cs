@@ -23,5 +23,13 @@ namespace Negocio
         {
             return _MPPCuenta.Actualizar(aCuenta);
         }
+        public bool Agregar(Cuenta nCuenta)
+        {
+            return _MPPCuenta.Agregar(nCuenta);
+        }
+        public bool Borrar(int usuario_Id)
+        {
+            return _MPPCuenta.Borrar(usuario_Id);
+        }
     }
 }
