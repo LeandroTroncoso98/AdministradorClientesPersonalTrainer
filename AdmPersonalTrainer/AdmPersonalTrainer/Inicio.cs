@@ -91,5 +91,10 @@ namespace AdmPersonalTrainer
         {
             AbrirFormChild(new Cuentas());
         }
+
+        private void btnRutina_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new RutinaForm());
+        }
     }
 }

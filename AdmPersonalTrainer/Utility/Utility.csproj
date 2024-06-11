@@ -46,6 +46,7 @@
     <Compile Include="Verificador.cs" />
     <Compile Include="VerificadorCliente.cs" />
     <Compile Include="VerificadorCuenta.cs" />
+    <Compile Include="VerificadorRutina.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

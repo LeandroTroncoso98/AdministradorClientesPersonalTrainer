@@ -42,15 +42,15 @@ namespace AdmPersonalTrainer.Clientes
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.cbEditar = new System.Windows.Forms.CheckBox();
+            this.txtCuentaMonto = new System.Windows.Forms.TextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtCuentaMonto = new System.Windows.Forms.TextBox();
-            this.cbEditar = new System.Windows.Forms.CheckBox();
-            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.btnActualizarCuenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.panel3.SuspendLayout();
@@ -158,7 +158,7 @@ namespace AdmPersonalTrainer.Clientes
             this.pnlCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
             this.pnlCuenta.Controls.Add(this.panel4);
             this.pnlCuenta.Controls.Add(this.panel2);
-            this.pnlCuenta.Location = new System.Drawing.Point(470, 186);
+            this.pnlCuenta.Location = new System.Drawing.Point(470, 207);
             this.pnlCuenta.Name = "pnlCuenta";
             this.pnlCuenta.Size = new System.Drawing.Size(550, 250);
             this.pnlCuenta.TabIndex = 22;
@@ -199,6 +199,64 @@ namespace AdmPersonalTrainer.Clientes
             this.panel2.Size = new System.Drawing.Size(544, 234);
             this.panel2.TabIndex = 23;
             // 
+            // dtpVencimiento
+            // 
+            this.dtpVencimiento.Location = new System.Drawing.Point(297, 61);
+            this.dtpVencimiento.Name = "dtpVencimiento";
+            this.dtpVencimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpVencimiento.TabIndex = 34;
+            // 
+            // cbEditar
+            // 
+            this.cbEditar.AutoSize = true;
+            this.cbEditar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbEditar.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEditar.Location = new System.Drawing.Point(297, 216);
+            this.cbEditar.Name = "cbEditar";
+            this.cbEditar.Size = new System.Drawing.Size(240, 15);
+            this.cbEditar.TabIndex = 23;
+            this.cbEditar.Text = "Deseo actualizar la cuenta.";
+            this.cbEditar.UseVisualStyleBackColor = true;
+            this.cbEditar.CheckedChanged += new System.EventHandler(this.cbEditar_CheckedChanged);
+            // 
+            // txtCuentaMonto
+            // 
+            this.txtCuentaMonto.Location = new System.Drawing.Point(297, 138);
+            this.txtCuentaMonto.Name = "txtCuentaMonto";
+            this.txtCuentaMonto.Size = new System.Drawing.Size(200, 20);
+            this.txtCuentaMonto.TabIndex = 32;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.Red;
+            this.lblEstado.Location = new System.Drawing.Point(294, 106);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(79, 13);
+            this.lblEstado.TabIndex = 31;
+            this.lblEstado.Text = "20/05/24";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(65, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Monto abonado:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(65, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Estado:";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -227,64 +285,6 @@ namespace AdmPersonalTrainer.Clientes
             this.dtpFechaPago.TabIndex = 24;
             this.dtpFechaPago.ValueChanged += new System.EventHandler(this.dtpFechaPago_ValueChanged);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Estado:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 13);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Monto abonado:";
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.Color.Red;
-            this.lblEstado.Location = new System.Drawing.Point(294, 106);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(79, 13);
-            this.lblEstado.TabIndex = 31;
-            this.lblEstado.Text = "20/05/24";
-            // 
-            // txtCuentaMonto
-            // 
-            this.txtCuentaMonto.Location = new System.Drawing.Point(297, 138);
-            this.txtCuentaMonto.Name = "txtCuentaMonto";
-            this.txtCuentaMonto.Size = new System.Drawing.Size(200, 20);
-            this.txtCuentaMonto.TabIndex = 32;
-            // 
-            // cbEditar
-            // 
-            this.cbEditar.AutoSize = true;
-            this.cbEditar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbEditar.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEditar.Location = new System.Drawing.Point(297, 216);
-            this.cbEditar.Name = "cbEditar";
-            this.cbEditar.Size = new System.Drawing.Size(240, 15);
-            this.cbEditar.TabIndex = 23;
-            this.cbEditar.Text = "Deseo actualizar la cuenta.";
-            this.cbEditar.UseVisualStyleBackColor = true;
-            this.cbEditar.CheckedChanged += new System.EventHandler(this.cbEditar_CheckedChanged);
-            // 
-            // dtpVencimiento
-            // 
-            this.dtpVencimiento.Location = new System.Drawing.Point(297, 61);
-            this.dtpVencimiento.Name = "dtpVencimiento";
-            this.dtpVencimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtpVencimiento.TabIndex = 34;
-            // 
             // btnActualizarCuenta
             // 
             this.btnActualizarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
@@ -294,7 +294,7 @@ namespace AdmPersonalTrainer.Clientes
             this.btnActualizarCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnActualizarCuenta.Image = global::AdmPersonalTrainer.Properties.Resources.icons8_money_32__1_;
             this.btnActualizarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarCuenta.Location = new System.Drawing.Point(842, 439);
+            this.btnActualizarCuenta.Location = new System.Drawing.Point(842, 514);
             this.btnActualizarCuenta.Name = "btnActualizarCuenta";
             this.btnActualizarCuenta.Size = new System.Drawing.Size(178, 50);
             this.btnActualizarCuenta.TabIndex = 34;
@@ -308,7 +308,7 @@ namespace AdmPersonalTrainer.Clientes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1081, 576);
+            this.ClientSize = new System.Drawing.Size(1097, 615);
             this.Controls.Add(this.btnActualizarCuenta);
             this.Controls.Add(this.pnlCuenta);
             this.Controls.Add(this.label2);

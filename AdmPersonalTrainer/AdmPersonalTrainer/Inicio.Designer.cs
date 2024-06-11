@@ -44,7 +44,7 @@ namespace AdmPersonalTrainer
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRutina = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEstadoCuenta = new System.Windows.Forms.Button();
             this.BtnClientes = new System.Windows.Forms.Button();
@@ -169,7 +169,7 @@ namespace AdmPersonalTrainer
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.panel3);
-            this.MenuVertical.Controls.Add(this.button2);
+            this.MenuVertical.Controls.Add(this.btnRutina);
             this.MenuVertical.Controls.Add(this.panel2);
             this.MenuVertical.Controls.Add(this.btnEstadoCuenta);
             this.MenuVertical.Controls.Add(this.BtnClientes);
@@ -228,21 +228,22 @@ namespace AdmPersonalTrainer
             this.panel3.Size = new System.Drawing.Size(12, 62);
             this.panel3.TabIndex = 3;
             // 
-            // button2
+            // btnRutina
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 353);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 62);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "RUTINAS";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRutina.FlatAppearance.BorderSize = 0;
+            this.btnRutina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnRutina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutina.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutina.Image = ((System.Drawing.Image)(resources.GetObject("btnRutina.Image")));
+            this.btnRutina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutina.Location = new System.Drawing.Point(12, 353);
+            this.btnRutina.Name = "btnRutina";
+            this.btnRutina.Size = new System.Drawing.Size(191, 62);
+            this.btnRutina.TabIndex = 4;
+            this.btnRutina.Text = "RUTINAS";
+            this.btnRutina.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnRutina.UseVisualStyleBackColor = true;
+            this.btnRutina.Click += new System.EventHandler(this.btnRutina_Click);
             // 
             // panel2
             // 
@@ -332,7 +333,7 @@ namespace AdmPersonalTrainer
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox BtnRestaurar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRutina;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel5;

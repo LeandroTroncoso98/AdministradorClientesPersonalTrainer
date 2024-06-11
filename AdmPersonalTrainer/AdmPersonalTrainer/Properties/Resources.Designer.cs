@@ -103,6 +103,16 @@ namespace AdmPersonalTrainer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_fit_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-fit-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_maximize_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-maximize-64", resourceCulture);

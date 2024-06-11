@@ -11,6 +11,7 @@ namespace BE
     {
         public int Id { get; set; }
         public string  Objetivo { get; set; }
+        public Cliente Cliente { get; set; }
         public List<Dia> Dias { get; set; }
     }
 }

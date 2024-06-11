@@ -44,6 +44,8 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="Dia.cs" />
+    <Compile Include="DiaAlimentacion.cs" />
+    <Compile Include="DiaRutina.cs" />
     <Compile Include="Ejercicio.cs" />
     <Compile Include="Entrenador.cs" />
     <Compile Include="EnumEstado.cs" />

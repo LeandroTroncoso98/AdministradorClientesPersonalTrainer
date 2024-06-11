@@ -11,7 +11,6 @@ namespace BE
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public List<Ejercicio> Ejercicios { get; set; }
-
+        
     }
 }

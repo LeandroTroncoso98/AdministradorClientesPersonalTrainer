@@ -17,6 +17,7 @@ namespace AdmPersonalTrainer.Clientes
     {
         private BLLCliente _BLLCliente;
         private BLLCuenta _BLLCuenta;
+        private BLLRutina _BLLRutina;
         private List<Cliente> listaClientes;
         private VerificadorCliente _VerificadorCliente;
         private Cliente _ClienteSelect;
@@ -24,6 +25,7 @@ namespace AdmPersonalTrainer.Clientes
         {
             _BLLCliente = new BLLCliente();
             _BLLCuenta = new BLLCuenta();
+            _BLLRutina = new BLLRutina();
             _VerificadorCliente = new VerificadorCliente();
             _ClienteSelect = null;
             InitializeComponent();
@@ -174,17 +176,20 @@ namespace AdmPersonalTrainer.Clientes
             {
                 if(_ClienteSelect != null)
                 {
-                    DialogResult resultado = MessageBox.Show($"Al borrar al cliente borrara su estado de cuenta para siempre.\n¿Esta seguro de que desea eliminar a {_ClienteSelect.Nombre} {_ClienteSelect.Apellido} de la base de datos?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult resultado = MessageBox.Show($"Al borrar al cliente tambien borrar:\n   ○ Cuenta\n   ○ Rutina\n   ○ Alimentacion\n¿Esta seguro de que desea eliminar a {_ClienteSelect.Nombre} {_ClienteSelect.Apellido} de la base de datos?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                     if(resultado == DialogResult.Yes)
                     {
                         if (_BLLCuenta.Borrar(_ClienteSelect.Id))
                         {
-                            if (_BLLCliente.Borrar(_ClienteSelect.Id))
+                            if (_BLLRutina.Borrar(_ClienteSelect.Id))
                             {
-                                MessageBox.Show("Se ha borrado con exíto");
-                                VaciasCampos();
-                                CargardgvCliente();
-                                _ClienteSelect = null;
+                                if (_BLLCliente.Borrar(_ClienteSelect.Id))
+                                {
+                                    MessageBox.Show("Se ha borrado con exíto");
+                                    VaciasCampos();
+                                    CargardgvCliente();
+                                    _ClienteSelect = null;
+                                }
                             }
                         }
                     }
